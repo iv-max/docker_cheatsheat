@@ -83,7 +83,7 @@ app.get("/", (req, res) => {
           <button
             type="submit"
             class="delete-button"
-            onclick="return confirm('Delete section?')"
+            data-delete-type="section"
           >
             ✕
           </button>
@@ -118,7 +118,7 @@ app.get("/", (req, res) => {
     <button
       type="submit"
       class="delete-button"
-      onclick="return confirm('Delete command?')"
+      data-delete-type="command"
     >
       ✕
     </button>
@@ -214,8 +214,6 @@ app.get("/seed", (req, res) => {
   );
 });
 
-
-
 app.post("/commands", (req, res) => {
   const { section_id, command, description } = req.body;
 
@@ -241,7 +239,6 @@ app.post("/commands", (req, res) => {
     },
   );
 });
-
 
 app.post("/delete-command", (req, res) => {
   const { command_id } = req.body;

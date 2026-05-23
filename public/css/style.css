@@ -255,6 +255,26 @@ code {
   font-weight: bold;
 }
 
+.confirm-modal-content {
+  width: 320px;
+}
+
+.confirm-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.cancel-button {
+  background-color: #e5e5e5 !important;
+  color: black !important;
+}
+
+.danger-button {
+  background-color: #ff4d4d !important;
+}
+
 .command-card:hover .delete-button,
 .section:hover .delete-button,
 .section:hover .add-command-area {
