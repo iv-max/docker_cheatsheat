@@ -1,0 +1,35 @@
+<div id="commandModal" class="modal hidden">
+
+  <div class="modal-content">
+
+    <h2>Add Command</h2>
+
+    <form action="/commands" method="POST">
+
+      <input
+        type="hidden"
+        id="sectionIdInput"
+        name="section_id"
+      >
+
+      <input
+        type="text"
+        name="command"
+        placeholder="docker command"
+        required
+      >
+
+      <textarea
+        name="description"
+        placeholder="Command description"
+      ></textarea>
+
+      <button type="submit">
+        Save Command
+      </button>
+
+    </form>
+
+  </div>
+
+</div>

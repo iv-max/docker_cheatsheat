@@ -9,14 +9,10 @@
   <link rel="stylesheet" href="/css/style.css">
 </head>
 
-
-
 <body>
 
   <header class="header">
-
     <div class="logo-container">
-
       <img
         class="logo"
         src="https://www.docker.com/wp-content/uploads/2022/03/Moby-logo.png"
@@ -24,121 +20,25 @@
       >
 
       <h1>Docker Cheat Sheet</h1>
-
     </div>
-
   </header>
 
   <main class="content">
-
-      {{SECTIONS}}
+    {{SECTIONS}}
 
     <button id="openModalButton" class="add-button">
-  + Add Section
-</button>
+      + Add Section
+    </button>
+  </main>
+
+  {{ADD_SECTION_MODAL}}
+
+  {{ADD_COMMAND_MODAL}}
+
+  {{CONFIRM_DELETE_MODAL}}
+
+<script type="module" src="/js/main.js"></script>
 
 
-</main>
-
-<div id="modal" class="modal hidden">
-
-  <div class="modal-content">
-
-    <h2>Add Section</h2>
-
-    <form action="/sections" method="POST">
-
-      <input
-        type="text"
-        name="title"
-        placeholder="Section title"
-        required
-      >
-
-      <textarea
-        name="description"
-        placeholder="Section description"
-      ></textarea>
-
-      <button type="submit">
-        Save Section
-      </button>
-
-    </form>
-
-  </div>
-
-</div>
-
-<div id="commandModal" class="modal hidden">
-
-  <div class="modal-content">
-
-    <h2>Add Command</h2>
-
-    <form action="/commands" method="POST">
-
-      <input
-        type="hidden"
-        id="sectionIdInput"
-        name="section_id"
-      >
-
-      <input
-        type="text"
-        name="command"
-        placeholder="docker command"
-        required
-      >
-
-      <textarea
-        name="description"
-        placeholder="Command description"
-      ></textarea>
-
-      <button type="submit">
-        Save Command
-      </button>
-
-    </form>
-
-  </div>
-
-</div>
-
-
-<div id="confirmModal" class="modal hidden">
-
-  <div class="modal-content confirm-modal-content">
-
-    <h2 id="confirmTitle">
-      Delete item?
-    </h2>
-
-    <div class="confirm-buttons">
-
-      <button
-        id="cancelDeleteButton"
-        class="cancel-button"
-      >
-        Cancel
-      </button>
-
-      <button
-        id="confirmDeleteButton"
-        class="danger-button"
-      >
-        Delete
-      </button>
-
-    </div>
-
-  </div>
-
-</div>
-
-
-  <script src="/js/main.js"></script>
-  
 </body>
 </html>
