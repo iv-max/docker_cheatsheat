@@ -148,10 +148,16 @@ body {
 
 .command-card {
   background-color: #f1f1f1;
-  padding: 10px 12px;
+  /* padding: 10px 12px; */
   border-radius: 8px;
   margin-top: 10px;
   position: relative;
+
+    padding:
+    14px
+    60px
+    10px
+    12px;
 }
 
 code {
