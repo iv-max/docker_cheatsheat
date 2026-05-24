@@ -167,7 +167,7 @@ code {
   font-size: 14px;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 1050px) {
   .content {
     column-count: 1;
   }
