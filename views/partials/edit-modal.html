@@ -1,0 +1,27 @@
+<div id="editModal" class="modal hidden">
+  <div class="modal-content">
+    <h2 id="editModalTitle">Edit</h2>
+
+    <form id="editForm" method="POST">
+      <input type="hidden" id="editIdInput" name="id">
+
+      <input
+        type="text"
+        id="editTitleInput"
+        name="title"
+        placeholder="Title / Command"
+        required
+      >
+
+      <textarea
+        id="editDescriptionInput"
+        name="description"
+        placeholder="Description"
+      ></textarea>
+
+      <button type="submit">
+        Save Changes
+      </button>
+    </form>
+  </div>
+</div>

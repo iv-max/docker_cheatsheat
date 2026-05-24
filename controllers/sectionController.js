@@ -20,6 +20,27 @@ function createSection(req, res) {
   );
 }
 
+function updateSection(req, res) {
+  const { id, title, description } = req.body;
+
+  db.run(
+    `
+    UPDATE sections
+    SET title = ?, description = ?
+    WHERE id = ?
+    `,
+    [title, description, id],
+    (err) => {
+      if (err) {
+        console.error(err.message);
+        return res.send("Database error");
+      }
+
+      res.redirect("/");
+    },
+  );
+}
+
 function deleteSection(req, res) {
   const { section_id } = req.body;
 
@@ -43,4 +64,5 @@ function deleteSection(req, res) {
 module.exports = {
   createSection,
   deleteSection,
+  updateSection,
 };

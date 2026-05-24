@@ -81,40 +81,41 @@ body {
   font-size: 22px;
 }
 
-/* .section {
-
-
-  position: relative;
-
-  background: white;
-
-  padding: 20px;
-
-  border-radius: 12px;
-
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-} */
 
 .delete-form {
   margin: 0;
 }
-/* 
-.delete-button {
 
+.section-actions {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+
+.edit-button {
   opacity: 0;
-
   border: none;
-
   background: transparent;
-
-  color: #ff4d4d;
-
-  font-size: 18px;
-
+  color: #0b5cad;
+  font-size: 13px;
   cursor: pointer;
-
   transition: 0.2s;
-} */
+}
+
+.section:hover .edit-button,
+.command-card:hover .edit-button {
+  opacity: 1;
+}
+
+.command-card .edit-button {
+  position: absolute;
+  top: 8px;
+  right: 36px;
+}
+
+.command-card .delete-button {
+  right: 8px;
+}
 
 .delete-button {
   position: absolute;

@@ -25,6 +25,27 @@ function createCommand(req, res) {
   );
 }
 
+function updateCommand(req, res) {
+  const { id, title, description } = req.body;
+
+  db.run(
+    `
+    UPDATE commands
+    SET command = ?, description = ?
+    WHERE id = ?
+    `,
+    [title, description, id],
+    (err) => {
+      if (err) {
+        console.error(err.message);
+        return res.send("Database error");
+      }
+
+      res.redirect("/");
+    },
+  );
+}
+
 function deleteCommand(req, res) {
   const { command_id } = req.body;
 
@@ -48,4 +69,5 @@ function deleteCommand(req, res) {
 module.exports = {
   createCommand,
   deleteCommand,
+  updateCommand,
 };
